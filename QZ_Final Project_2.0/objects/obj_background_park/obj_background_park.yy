@@ -26,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "Sprite2",
-    "path": "sprites/Sprite2/Sprite2.yy",
+    "name": "spr_background_park",
+    "path": "sprites/spr_background_park/spr_background_park.yy",
   },
   "spriteMaskId": null,
   "visible": true,

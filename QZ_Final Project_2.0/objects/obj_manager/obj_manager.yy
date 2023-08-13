@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "Sprite10",
-    "path": "sprites/Sprite10/Sprite10.yy",
+    "name": "spr_manager",
+    "path": "sprites/spr_manager/spr_manager.yy",
   },
   "spriteMaskId": null,
   "visible": true,

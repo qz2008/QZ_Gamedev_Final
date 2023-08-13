@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "Sprite3",
-    "path": "sprites/Sprite3/Sprite3.yy",
+    "name": "spr_orangecat",
+    "path": "sprites/spr_orangecat/spr_orangecat.yy",
   },
   "spriteMaskId": null,
   "visible": true,
