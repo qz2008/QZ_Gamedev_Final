@@ -1,4 +1,14 @@
 {
   "FolderOrderSettings": [],
-  "ResourceOrderSettings": [],
+  "ResourceOrderSettings": [
+    {"name":"obj_player_bullet","order":1,"path":"objects/obj_player_bullet/obj_player_bullet.yy",},
+    {"name":"Sprite15","order":1,"path":"sprites/Sprite15/Sprite15.yy",},
+    {"name":"obj_managementwords","order":4,"path":"objects/obj_managementwords/obj_managementwords.yy",},
+    {"name":"obj_managementbar","order":3,"path":"objects/obj_managementbar/obj_managementbar.yy",},
+    {"name":"obj_enermy","order":5,"path":"objects/obj_enermy/obj_enermy.yy",},
+    {"name":"obj_enemybullet","order":6,"path":"objects/obj_enemybullet/obj_enemybullet.yy",},
+    {"name":"spr_managementbar","order":1,"path":"sprites/spr_managementbar/spr_managementbar.yy",},
+    {"name":"Sprite16","order":2,"path":"sprites/Sprite16/Sprite16.yy",},
+    {"name":"obj_management","order":2,"path":"objects/obj_management/obj_management.yy",},
+  ],
 }

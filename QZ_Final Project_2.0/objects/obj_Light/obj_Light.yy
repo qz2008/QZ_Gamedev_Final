@@ -29,8 +29,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_wastedlight",
-    "path": "sprites/spr_wastedlight/spr_wastedlight.yy",
+    "name": "spr_wastedlight1",
+    "path": "sprites/spr_wastedlight1/spr_wastedlight1.yy",
   },
   "spriteMaskId": null,
   "visible": true,

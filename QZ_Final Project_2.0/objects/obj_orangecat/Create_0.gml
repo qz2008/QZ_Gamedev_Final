@@ -6,7 +6,7 @@ index_catcat = 0;
 catcat_start = 0;
 catcat_end = 2;
 
-
+catcattimer = 0;
 
 
 

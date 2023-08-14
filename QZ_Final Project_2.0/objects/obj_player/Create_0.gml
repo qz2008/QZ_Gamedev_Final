@@ -4,9 +4,20 @@ image_speed = 0;
 detectRed = 200;
 moveSpd = 3;
 
-Health = health;
+shootdelayinit = 60; //CD
+shootdelay = shootdelayinit;
+mybullettype = obj_player_bullet; //弹药类型
+ammo = 10;//弹药
+enemylist = ds_list_create();//列表为了制作打击最近敌人
+targetenemy = noone;
+
+
+Health = 100;
 maxHealth = 100;
-health = 80;
+determination = 100;
+minusdeterminmultiplyer = 1;
+
+
 //healthRatio = health/maxHealth;
 //barX  = x-50;
 //barY = x-20;
@@ -32,7 +43,10 @@ frame_index_catcat = 12;
 
 catcat = 0;
 
+words = "";
+wordshurt= "";
 
+timertogetword = 0;
 
 
 

@@ -12,8 +12,12 @@ index_catcat +=1;
 
 if (place_meeting(x, y, obj_player) && keyboard_check(vk_space))
 {
+	
 	obj_player.catcat = 1;
-	instance_destroy();
+	
+	
+	
+	//instance_destroy();
 
 }
 

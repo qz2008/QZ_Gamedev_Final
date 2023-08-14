@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+if(instance_exists(obj_enermy)){
 if(instance_exists(obj_player) )
 {
     //current_player_point_x = obj_player.x;
@@ -11,6 +11,8 @@ if(instance_exists(obj_player) )
 	//mid_y = (current_player_point_y+ current_player_point_starty)/2;
 	//point_x = current_player_point_startx + 0.25 * (current_player_point_x - current_player_point_startx);
 	//point_y = current_player_point_starty + 0.25 * (current_player_point_y - current_player_point_starty);
+   
+	//move_towards_point(point_x,point_y, movespd);
 	if(obj_enermy_oldGM1.image_xscale = 1)
 	{
 	//move_towards_point(point_x,point_y, movespd);
@@ -24,12 +26,14 @@ if(instance_exists(obj_player) )
 	x += lengthdir_x(speed, dir);
 	y += lengthdir_y(speed,dir);
 	}
+	
 }
 else{
 	
 	direction += image_xscale*8;
 
 
+}
 }
 
 

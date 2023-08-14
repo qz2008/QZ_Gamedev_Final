@@ -108,6 +108,7 @@ if (place_meeting( x, y,obj_orangecat) && keyboard_check(vk_space))
 
 if(catcat = 1)
 {
+	
 	image_index = frame_start_catcat;
 	frame_index_catcat += 1;
 	image_index = frame_index_catcat;
@@ -120,7 +121,11 @@ if(catcat = 1)
 	
 }
 
-
+shootdelay -= 1;
+if (shootdelay <=0)
+{
+  shootdelay = 0;
+}
 
 
 

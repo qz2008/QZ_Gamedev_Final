@@ -45,6 +45,9 @@ if(timer > CD)
 	timer = 0;
 	
 	
+	
+	
+	
 }
 
 }
