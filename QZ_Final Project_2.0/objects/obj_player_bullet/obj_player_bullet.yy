@@ -13,8 +13,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Props",
+    "path": "folders/Objects/Props.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -33,8 +33,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "Sprite15",
-    "path": "sprites/Sprite15/Sprite15.yy",
+    "name": "spr_musicattack",
+    "path": "sprites/spr_musicattack/spr_musicattack.yy",
   },
   "spriteMaskId": null,
   "visible": true,

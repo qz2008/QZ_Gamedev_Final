@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (keyboard_check(ord("W")) && !place_meeting( x, y-3, obj_Wall) )
+if (keyboard_check(ord("W")) && !place_meeting( x, y-3, obj_Wall) && !place_meeting( x, y-3, obj_broader) )
 {
 	catcat = 0;
     y -= moveSpd; // 向上移动
@@ -19,7 +19,7 @@ if (keyboard_check(ord("W")) && !place_meeting( x, y-3, obj_Wall) )
 	}
 	
 }
-if (keyboard_check(ord("S")) && !place_meeting( x, y+3,obj_Wall))
+if (keyboard_check(ord("S")) && !place_meeting( x, y+3,obj_Wall) && !place_meeting( x, y+3, obj_broader))
 {
 	catcat = 0;
      y += moveSpd; // 向下移动
@@ -38,7 +38,7 @@ if (keyboard_check(ord("S")) && !place_meeting( x, y+3,obj_Wall))
 	}
 	
 }
-if (keyboard_check(ord("A")) && !place_meeting( x-3, y,obj_Wall) )
+if (keyboard_check(ord("A")) && !place_meeting( x-3, y,obj_Wall) && !place_meeting( x-3, y, obj_broader) )
 {
 	catcat = 0;
 	//image_xscale = -1; //反向
@@ -59,7 +59,7 @@ if (keyboard_check(ord("A")) && !place_meeting( x-3, y,obj_Wall) )
 	}
 	
 }
-if (keyboard_check(ord("D")) && !place_meeting( x+3, y,obj_Wall) )
+if (keyboard_check(ord("D")) && !place_meeting( x+3, y,obj_Wall) &&  !place_meeting( x+3, y, obj_broader))
 {
 	catcat = 0;
 	//image_xscale = 1; //反向
@@ -102,7 +102,7 @@ if (place_meeting ( x, y, obj_Wall) && keyboard_check(ord("D") ))
 if (place_meeting( x, y,obj_orangecat) && keyboard_check(vk_space))
 {
 	catcat = 1;
-	health += 10;
+	//global.Health += 10;
 	
 }
 
@@ -127,7 +127,58 @@ if (shootdelay <=0)
   shootdelay = 0;
 }
 
+if(room = rm_1_bedroom_0)
+{
+	introduction_timer ++;
+}
 
+if(place_meeting(x,y,obj_transfer_to_room_2))
+{
+	room_goto(rm_2_sidewalk);
+}
+if(place_meeting(x,y,obj_transfer_to_room_7))
+{
+	room_goto(rm_6_streetcorner);
+}
+if(place_meeting(x,y,obj_transfer_to_room_8))
+  {
+	                room_goto(rm_7_mainstreet);
+  }
+  
+  
+if(Marks >0)
+{
+if(place_meeting(x,y,obj_fstudent1))
+{
+	wordshurt = "aefafadfaefa";
+	words = "no, i am not like that";
+}
+if(place_meeting(x,y,obj_fstudent2))
+{
+	wordshurt = "afaefaefaef";
+	words = "no, i am not like that";
+}
+if(place_meeting(x,y,obj_mstudent1))
+{
+	wordshurt = "aefaefaef";
+	words = "no, i am not like that";
+}
+if(place_meeting(x,y,obj_mstudent2))
+{
+	wordshurt = "aefaefaef";
+	words = "no, i am not like that";
+}
+}
 
-
-
+if(Marks = 0 && instance_exists(obj_enermy_boy))
+{
+	 words = "why so quiet?";
+}
+if(Marks = 0 && !instance_exists(obj_enermy_boy))
+{
+	 words = "now, why quiet?";
+}
+if(!instance_exists(obj_enermy_boy))
+{
+	Marks = 0;
+}

@@ -14,3 +14,16 @@ if(room = rm_park && instance_exists(obj_player) && _enermycount < 3)
 	   
 	}
 }
+
+if(room = rm_4_classroom)
+{
+	timerenermyparkgen ++;
+	if(timerenermyparkgen > 100)
+	{
+       var random_x = random_range(100,800);
+       var random_y = random_range(400,500);
+       var random_enmermy = choose(obj_getbullet);
+       instance_create_depth(random_x,random_y,1,random_enmermy);
+	   timerenermyparkgen = 0;
+}
+}

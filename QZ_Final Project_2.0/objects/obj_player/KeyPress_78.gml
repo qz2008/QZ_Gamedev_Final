@@ -9,10 +9,10 @@
 				 
 			 }
 		 
-	    if (shootdelay <= 0 && ammo>0)
+	    if (shootdelay <= 0 && global.ammo>0)
      {
 	  
-	  ammo --;
+	  global.ammo --;
 	  var _b = instance_create_depth(x +image_xscale*10,y,depth-1,mybullettype);
 	  _b.target = targetenemy;
 	  shootdelay = shootdelayinit;

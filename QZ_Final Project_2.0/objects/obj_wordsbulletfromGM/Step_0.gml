@@ -3,6 +3,8 @@
 if(instance_exists(obj_enermy)){
 if(instance_exists(obj_player) )
 {
+	if(room = rm_park)
+	{
     //current_player_point_x = obj_player.x;
     //current_player_point_y = obj_player.y;
 	//current_player_point_startx = obj_player.xprevious;
@@ -13,19 +15,19 @@ if(instance_exists(obj_player) )
 	//point_y = current_player_point_starty + 0.25 * (current_player_point_y - current_player_point_starty);
    
 	//move_towards_point(point_x,point_y, movespd);
-	if(obj_enermy_oldGM1.image_xscale = 1)
-	{
+	   if(obj_enermy_oldGM1.image_xscale = 1)
+	  {
 	//move_towards_point(point_x,point_y, movespd);
-	x += lengthdir_x(speed, dir);
-	y += lengthdir_y(speed,dir);
-	}
+	      x += lengthdir_x(speed, dir);
+	      y += lengthdir_y(speed,dir);
+	  }
 	
-	if(obj_enermy_oldGM1.image_xscale = -1)
-	{
-	direction = random(obj_player.x);
-	x += lengthdir_x(speed, dir);
-	y += lengthdir_y(speed,dir);
-	}
+	   if(obj_enermy_oldGM1.image_xscale = -1)
+	  {
+	      direction = random(obj_player.x);
+	      x += lengthdir_x(speed, dir);
+	      y += lengthdir_y(speed,dir);
+	  }
 	
 }
 else{
@@ -34,6 +36,13 @@ else{
 
 
 }
+
+
+if(room = rm_5_classhallway_1)
+{
+	x += lengthdir_x(speed, dir);
+	y += lengthdir_y(speed,dir);
 }
 
-
+}
+}

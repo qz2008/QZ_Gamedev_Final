@@ -7,22 +7,22 @@
 
 
 
-if(determination > 70)
+if(global.determination > 70)
 {
    words = "cat and determined makes me alive";
 }
 
-if( determination < 70 && determination > 50)
+if(global.determination < 70 && global.determination > 50)
 {
     words = "cat and determined makes me alive";
 }
 
-if(determination < 50 && determination > 20)
+if(global.determination < 50 && global.determination > 20)
 {
    words = "cat save me";
 }
 
-if( determination < 20 && determination > 0)
+if( global.determination < 20 && global.determination > 0)
 {
   words = "i hate cat, harry animals spread bugs";
 }

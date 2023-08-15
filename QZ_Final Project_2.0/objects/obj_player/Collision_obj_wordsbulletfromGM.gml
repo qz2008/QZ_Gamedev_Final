@@ -1,32 +1,66 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if(instance_exists(obj_wordsbulletfromGM))
+if(instance_exists(obj_wordsbulletfromGM) && room = rm_park)
 {
 wordshurt = obj_wordsbulletfromGM.badwords;
 timertogetword ++;
 
 if(timertogetword > 2){
-Health -=10;
-determination -= 10*minusdeterminmultiplyer;
-timertogetword = 0;
+global.Health -=10;
+global.determination -= 10*global.minusdeterminmultiplyer;
+global.timertogetword = 0;
 
-if(determination > 70)
+if(global.determination > 70)
 {
    words = "that is hurt, they are wrong";
 }
 
-if( determination < 70 && determination > 50)
+if( global.determination < 70 && global.determination > 50)
 {
    words = "I feel shame";
 }
 
-if(determination < 50 && determination > 20)
+if(global.determination < 50 && global.determination > 20)
 {
    words = "maybe they are right";
 }
 
-if( determination < 20 && determination > 0)
+if( global.determination < 20 && global.determination > 0)
+{
+   words = "why i am doing this";
+}
+
+}
+}
+
+if(instance_exists(obj_wordsbulletfromGM) && room = rm_5_classhallway_1)
+{
+	
+wordshurt = obj_wordsbulletfromGM.badwords;
+timertogetword ++;
+
+if(timertogetword > 2){
+global.Health -=1;
+global.determination -= 1*global.minusdeterminmultiplyer;
+global.timertogetword = 0;
+
+if(global.determination > 70)
+{
+   words = "that is hurt, they are wrong";
+}
+
+if( global.determination < 70 && global.determination > 50)
+{
+   words = "I feel shame";
+}
+
+if(global.determination < 50 && global.determination > 20)
+{
+   words = "maybe they are right";
+}
+
+if( global.determination < 20 && global.determination > 0)
 {
    words = "why i am doing this";
 }
