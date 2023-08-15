@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "QZ_Final Project_2",
-    "path": "QZ_Final Project_2.yyp",
+    "name": "Templatetest",
+    "path": "folders/Sprites/Templatetest.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -142,7 +142,7 @@ if(place_meeting(x,y,obj_transfer_to_room_7))
 }
 if(place_meeting(x,y,obj_transfer_to_room_8))
   {
-	                room_goto(rm_7_mainstreet);
+	                room_goto(rm_8_parkentry);
   }
   
   
