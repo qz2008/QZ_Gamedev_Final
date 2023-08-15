@@ -4,7 +4,7 @@
 chaseRange = 400;
 CD = 200;
 timer = 0;
-image_speed = 0.1
+image_speed = 0.07
 
 
 

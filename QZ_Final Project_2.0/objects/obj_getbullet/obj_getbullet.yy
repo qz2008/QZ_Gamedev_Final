@@ -28,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_musiccollect",
-    "path": "sprites/spr_musiccollect/spr_musiccollect.yy",
+    "name": "spr_music1",
+    "path": "sprites/spr_music1/spr_music1.yy",
   },
   "spriteMaskId": null,
   "visible": true,

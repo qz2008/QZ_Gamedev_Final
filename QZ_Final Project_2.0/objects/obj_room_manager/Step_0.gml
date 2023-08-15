@@ -176,3 +176,91 @@ if(room = rm_6_streetcorner)
 	 }
    
 }
+
+if(room = rm_park_death)
+{
+	if( keyboard_check_pressed(vk_space))
+	{
+		global.death +=1;
+		global.Health +=80;
+		room_goto(rm_8_parkentry);
+	}
+}
+
+if(room = rm_6_streetcorner)
+{
+	if(obj_player.Marks = 1)
+	{
+		obj_player.words = "Orange catcat";
+        obj_player.wordshurt= "cat: miao";
+	}
+	if(obj_player.Marks = 2)
+	{
+		obj_player.words = "shfgosurhgot";
+        obj_player.wordshurt= "srugorsugo";
+	}
+	if(obj_player.Marks = 3)
+	{
+		obj_player.words = "shfgosurhgot";
+        obj_player.wordshurt= "srugorsugo";
+	}
+	if(obj_player.Marks = 4)
+	{
+		obj_player.words = "shfgosurhgot";
+        obj_player.wordshurt= "srugorsugo";
+	}
+	if(obj_player.Marks = 5)
+	{
+		obj_player.words = "shfgosurhgot";
+        obj_player.wordshurt= "srugorsugo";
+	}
+	if(obj_player.Marks = 6)
+	{
+		obj_player.words = "shfgosurhgot";
+        obj_player.wordshurt= "srugorsugo";
+	}
+	if(obj_player.Marks = 7)
+	{
+		obj_player.words = "shfgosurhgot";
+        obj_player.wordshurt= "srugorsugo";
+	}
+}
+
+if(room = rm_8_parkentry)
+{
+	if(obj_player.Marks = 1)
+	{
+		obj_player.words = "afggoueh;afoue";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 2)
+	{
+		obj_player.words = "shfgosurhgot";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 3)
+	{
+		obj_player.words = "adfejbaf;ebfot";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 4)
+	{
+		obj_player.words = "shfgosurhgot";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 5)
+	{
+		obj_player.words = "shfgosurhgot";
+        obj_player.wordshurt= "...o";
+	}
+	if(obj_player.Marks = 6)
+	{
+		obj_player.words = "shfgosurhgot";
+        obj_player.wordshurt= "srugorsugo";
+	}
+	if(obj_player.Marks = 7)
+	{
+		obj_player.words = "shfgosurhgot";
+        obj_player.wordshurt= "....";
+	}
+}

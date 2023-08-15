@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_grandma_001",
-  "bbox_bottom": 61,
-  "bbox_left": 16,
-  "bbox_right": 45,
+  "bbox_bottom": 72,
+  "bbox_left": 19,
+  "bbox_right": 53,
   "bbox_top": 1,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -18,7 +18,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 64,
+  "height": 75,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"5b803618-dfe1-47f1-85e5-e110365e86cb","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -72,5 +72,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 64,
+  "width": 75,
 }

@@ -7,8 +7,8 @@ wordshurt = obj_wordsbulletfromGM.badwords;
 timertogetword ++;
 
 if(timertogetword > 2){
-global.Health -=10;
-global.determination -= 10*global.minusdeterminmultiplyer;
+global.Health -=5;
+global.determination -= 1*global.minusdeterminmultiplyer;
 global.timertogetword = 0;
 
 if(global.determination > 70)

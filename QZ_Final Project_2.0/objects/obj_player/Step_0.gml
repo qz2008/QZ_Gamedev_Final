@@ -144,41 +144,59 @@ if(place_meeting(x,y,obj_transfer_to_room_8))
   {
 	                room_goto(rm_8_parkentry);
   }
+  if(place_meeting(x,y,obj_transfer_to_room_9))
+  {
+	                room_goto(rm_park);
+  }
   
-  
-if(Marks >0)
+  if(room = rm_5_classhallway_1)
+  {
+     if(Marks >0)
+     {
+        if(place_meeting(x,y,obj_fstudent1))
+      {
+	        wordshurt = "aefafadfaefa";
+	        words = "no, i am not like that";
+       }
+        if(place_meeting(x,y,obj_fstudent2))
+       {
+	       wordshurt = "afaefaefaef";
+	       words = "no, i am not like that";
+       }
+        if(place_meeting(x,y,obj_mstudent1))
+       {
+	       wordshurt = "aefaefaef";
+	       words = "no, i am not like that";
+        }
+        if(place_meeting(x,y,obj_mstudent2))
+       {
+	       wordshurt = "aefaefaef";
+	       words = "no, i am not like that";
+        }
+      }
+
+      if(Marks = 0 && instance_exists(obj_enermy_boy))
+    {
+	     words = "why so quiet?";
+     }
+     if(Marks = 0 && !instance_exists(obj_enermy_boy))
+     {
+	     words = "now, why quiet?";
+     }
+     if(!instance_exists(obj_enermy_boy))
+     {
+	    Marks = 0;
+		instance_destroy(obj_broader);
+     }
+  }
+
+if(room = rm_park && global.Health < 0)
 {
-if(place_meeting(x,y,obj_fstudent1))
-{
-	wordshurt = "aefafadfaefa";
-	words = "no, i am not like that";
-}
-if(place_meeting(x,y,obj_fstudent2))
-{
-	wordshurt = "afaefaefaef";
-	words = "no, i am not like that";
-}
-if(place_meeting(x,y,obj_mstudent1))
-{
-	wordshurt = "aefaefaef";
-	words = "no, i am not like that";
-}
-if(place_meeting(x,y,obj_mstudent2))
-{
-	wordshurt = "aefaefaef";
-	words = "no, i am not like that";
-}
+	room_goto(rm_park_death);
 }
 
-if(Marks = 0 && instance_exists(obj_enermy_boy))
+if(room = rm_6_streetcorner || room = rm_8_parkentry)
 {
-	 words = "why so quiet?";
-}
-if(Marks = 0 && !instance_exists(obj_enermy_boy))
-{
-	 words = "now, why quiet?";
-}
-if(!instance_exists(obj_enermy_boy))
-{
-	Marks = 0;
+	place_meeting(x,y,obj_mark);
+	Marks ++;
 }

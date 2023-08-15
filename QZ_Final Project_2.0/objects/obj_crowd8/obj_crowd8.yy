@@ -2,7 +2,9 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "obj_crowd8",
-  "eventList": [],
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+  ],
   "managed": true,
   "overriddenProperties": [],
   "parent": {
@@ -26,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_crowd1_001",
-    "path": "sprites/spr_crowd1_001/spr_crowd1_001.yy",
+    "name": "spr_crowd8_001",
+    "path": "sprites/spr_crowd8_001/spr_crowd8_001.yy",
   },
   "spriteMaskId": null,
   "visible": true,

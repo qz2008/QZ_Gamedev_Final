@@ -60,7 +60,7 @@ if(room = rm_1_bedroom_0 )
 }
 
 
-if(room = rm_2_sidewalk || room = rm_4_classroom || room = rm_5_classhallway_1 || room = rm_6_streetcorner)
+if(room = rm_2_sidewalk || room = rm_4_classroom || room = rm_5_classhallway_1 || room = rm_6_streetcorner || room = rm_8_parkentry)
 {
 	var p1 = instance_find(obj_player, 0);
     var view_x = camera_get_view_x(view_camera[0]);

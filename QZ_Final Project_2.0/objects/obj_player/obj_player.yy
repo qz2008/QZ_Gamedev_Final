@@ -13,7 +13,6 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":89,"eventType":9,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_transfer_to_room_3","path":"objects/obj_transfer_to_room_3/obj_transfer_to_room_3.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_transfer_to_room_4","path":"objects/obj_transfer_to_room_4/obj_transfer_to_room_4.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_enermy_oldGM1","path":"objects/obj_enermy_oldGM1/obj_enermy_oldGM1.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_transfer_to_room_5","path":"objects/obj_transfer_to_room_5/obj_transfer_to_room_5.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_getbullet","path":"objects/obj_getbullet/obj_getbullet.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_transfer_to_room_6","path":"objects/obj_transfer_to_room_6/obj_transfer_to_room_6.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
