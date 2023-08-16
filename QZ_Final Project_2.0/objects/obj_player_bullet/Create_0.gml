@@ -10,7 +10,7 @@ chase = false;
 alarm[0] = 10;
 alarm[1] = 120;
 
-
+image_speed = 0.2;
 
 
 

@@ -34,8 +34,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_musicattack",
-    "path": "sprites/spr_musicattack/spr_musicattack.yy",
+    "name": "spr_music1",
+    "path": "sprites/spr_music1/spr_music1.yy",
   },
   "spriteMaskId": null,
   "visible": true,

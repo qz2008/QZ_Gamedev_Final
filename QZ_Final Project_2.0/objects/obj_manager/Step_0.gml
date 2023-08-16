@@ -15,10 +15,11 @@ if(room = rm_park && instance_exists(obj_player) && _enermycount < 3)
 	}
 }
 
+var _bulletaccount = instance_number(obj_player_bullet);
 if(room = rm_4_classroom)
 {
 	timerenermyparkgen ++;
-	if(timerenermyparkgen > 100)
+	if(timerenermyparkgen > 100 && _bulletaccount < 7)
 	{
        var random_x = random_range(100,800);
        var random_y = random_range(400,500);

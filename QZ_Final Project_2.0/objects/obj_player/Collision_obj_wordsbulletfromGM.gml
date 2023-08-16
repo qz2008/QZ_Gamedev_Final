@@ -81,22 +81,22 @@ global.timertogetword = 0;
 
 if(global.determination > 70)
 {
-   words = "that is hurt, they are wrong";
+   words = "That hurts.";
 }
 
 if( global.determination < 70 && global.determination > 50)
 {
-   words = "I feel shame";
+   words = "Am I wrong?.";
 }
 
 if(global.determination < 50 && global.determination > 20)
 {
-   words = "maybe they are right";
+   words = "I'm sorry.";
 }
 
 if( global.determination < 20 && global.determination > 0)
 {
-   words = "why i am doing this";
+   words = "I am guilty.";
 }
 
 }

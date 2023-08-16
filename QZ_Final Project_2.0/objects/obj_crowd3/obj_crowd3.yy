@@ -11,7 +11,10 @@
     "name": "Characters",
     "path": "folders/Objects/Characters.yy",
   },
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_crowd",
+    "path": "objects/obj_crowd/obj_crowd.yy",
+  },
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

@@ -30,8 +30,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_manager",
-    "path": "sprites/spr_manager/spr_manager.yy",
+    "name": "Sprite228",
+    "path": "sprites/Sprite228/Sprite228.yy",
   },
   "spriteMaskId": null,
   "visible": true,

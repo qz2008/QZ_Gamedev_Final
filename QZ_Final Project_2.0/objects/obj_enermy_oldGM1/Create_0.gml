@@ -2,8 +2,8 @@
 // You can write your code in this editor
 
 
-image_speed = 1;
-move_spd = 0.8;
+image_speed = 0.3;
+move_spd = 0.5;
 chasespd = 1;
 chaseRange = 400;
 CD = 200;

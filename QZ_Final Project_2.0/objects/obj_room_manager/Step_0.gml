@@ -14,33 +14,33 @@ if(room = rm_1_bedroom_0)
 {
 	if(obj_player.introduction_success = 0)
 	{
-	 obj_player.words = "Moon: This is the words in my mind";
-     obj_player.wordshurt= "Grandma: I said these words, press Y continue";
+	 obj_player.words = "Moonzi: Hi. This area is my thoughts.";
+     obj_player.wordshurt= "World: Press “Y” for “YES” and continue.";
 	}
 	if(obj_player.introduction_success = 1)
 	{
-	 obj_player.words = "Moon: Keep pressing Y follow grandma said";
-     obj_player.wordshurt= "Grandma: You can press W, S, A, D, to move";
+	 obj_player.words = "Moozi: I will be obedient. Keep pressing “Y”.";
+     obj_player.wordshurt= "Grandma: You can press W, S, A, D to move.";
 	}
 	if(obj_player.introduction_success = 2)
 	{
 	 obj_player.words = "Moon: My health bar is at right";
-     obj_player.wordshurt= "Grandma: If you get hurt your health will go down";
+     obj_player.wordshurt= "Grandma: Don’t get hurt!";
 	}
 	if(obj_player.introduction_success = 3)
 	{
-	 obj_player.words = "Moon: If the health bar return 0 I will be game out";
-     obj_player.wordshurt= "Grandma: So keep safe sweet heart, the world is full of dangerous";
+	 obj_player.words = "Yes. I will be sane";
+     obj_player.wordshurt= "Grandma: Stay calm.";
 	}
 	if(obj_player.introduction_success = 4)
 	{
-	 obj_player.words = "Moon: Same as other game I can shoot";
-     obj_player.wordshurt= "Grandma: Actually that is your energy of singing";
+	 obj_player.words = "Moonzi: Power?";
+     obj_player.wordshurt= "Grandma: You do have talent.";
 	}
 	if(obj_player.introduction_success = 5)
 	{
-	 obj_player.words = "Moon: I love singing and cute cut!";
-     obj_player.wordshurt= "Grandma: You can use your voice to defeat the evil";
+	 obj_player.words = "Moonzi: I love singing!";
+     obj_player.wordshurt= "Grandma: Explore yourself and the world.";
 	}
 	if(obj_player.introduction_success = 6)
 	{
@@ -144,17 +144,17 @@ if(room = rm_4_classroom)
 	   obj_player.words = "Why they are look at me";
        obj_player.wordshurt= "Others:.....";
 	}
-	if(global.ammo >69 && global.ammo <20)
+	if(global.ammo >69 && global.ammo <80)
 	{
 	   obj_player.words = "Why they are look at me";
        obj_player.wordshurt= "Others:.....";
 	}
-	if(global.ammo >79 && global.ammo <80)
+	if(global.ammo >79 && global.ammo <90)
 	{
 	   obj_player.words = "Why they are look at me";
        obj_player.wordshurt= "Others:.....";
 	}
-	if(global.ammo >80)
+	if(global.ammo >90)
 	{
 	   obj_player.words = "Why they are look at me";
        obj_player.wordshurt= "Others:.....";
@@ -578,6 +578,8 @@ if(room = rm_nighmare_death)
 }
 if(room = rm_19_sweetdream)
 {
+	obj_player.words = "press space to sleep";
+    obj_player.wordshurt= "...";
 	sweetroom++;
 	if(sweetroom >100)
 	{

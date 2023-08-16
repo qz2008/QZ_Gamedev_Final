@@ -26,8 +26,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "Sprite215",
-    "path": "sprites/Sprite215/Sprite215.yy",
+    "name": "Sprite240",
+    "path": "sprites/Sprite240/Sprite240.yy",
   },
   "spriteMaskId": null,
   "visible": true,

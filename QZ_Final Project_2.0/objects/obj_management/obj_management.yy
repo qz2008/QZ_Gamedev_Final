@@ -28,8 +28,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "Sprite16",
-    "path": "sprites/Sprite16/Sprite16.yy",
+    "name": "Sprite225",
+    "path": "sprites/Sprite225/Sprite225.yy",
   },
   "spriteMaskId": null,
   "visible": true,

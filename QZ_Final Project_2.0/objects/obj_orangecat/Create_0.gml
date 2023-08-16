@@ -10,4 +10,4 @@ catcattimer = 0;
 
 spacetime = 0;
 
-
+depth = 1;

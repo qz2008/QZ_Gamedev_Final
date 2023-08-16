@@ -4,7 +4,8 @@ image_speed = 0;
 detectRed = 200;
 moveSpd = 3;
 
-shootdelayinit = 60; //CD
+
+shootdelayinit = 30; //CD
 shootdelay = shootdelayinit;
 mybullettype = obj_player_bullet; //弹药类型
 enemylist = ds_list_create();//列表为了制作打击最近敌人
@@ -40,7 +41,17 @@ frame_start_catcat = 16;
 frame_end_catcat = 26;
 frame_index_catcat = 16;
 
+frame_start_wait_left =27;
+frame_end_wait_left = 31;
+frame_start_wait_right =32;
+frame_end_wait_right = 36;
+frame_start_wait_index_left = 27;
+frame_start_wait_index_right = 32;
+waittimer = 0;
+waitsidedete_right = true;
+presscheck = false;
 catcat = 0;
+timercatcat = 0;
 
 words = "";
 wordshurt= "";

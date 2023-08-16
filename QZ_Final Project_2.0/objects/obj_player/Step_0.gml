@@ -6,6 +6,7 @@ if (keyboard_check(ord("W")) && !place_meeting( x, y-3, obj_Wall) && !place_meet
     y -= moveSpd; // 向上移动
 	frame_index_up += 1;
 	image_speed = 0.01;
+	presscheck = true;
 	
 	if (frame_index_up < frame_start_up || frame_index_up> frame_end_up )
 	{
@@ -25,6 +26,7 @@ if (keyboard_check(ord("S")) && !place_meeting( x, y+3,obj_Wall) && !place_meeti
      y += moveSpd; // 向下移动
 	frame_index_down += 1;
 	image_speed = 0.01;
+	presscheck = true;
 	if (frame_index_down < frame_start_down || frame_index_down > frame_end_down )
 	{
 	
@@ -45,6 +47,8 @@ if (keyboard_check(ord("A")) && !place_meeting( x-3, y,obj_Wall) && !place_meeti
      x -= moveSpd; // 向左移动
 	frame_index_left += 1;
 	image_speed = 0.01;
+	presscheck= true;
+	waitsidedete_right = false;
 	
 	if (frame_index_left < frame_start_left || frame_index_left > frame_end_left )
 	{
@@ -65,6 +69,7 @@ if (keyboard_check(ord("D")) && !place_meeting( x+3, y,obj_Wall) &&  !place_meet
 	//image_xscale = 1; //反向
      x += moveSpd; // 向右移动
 	frame_index_right += 1;
+	presscheck= true;
 	image_speed = 0.01;
 	
 	if (frame_index_right < frame_start_right || frame_index_right > frame_end_right )
@@ -80,6 +85,42 @@ if (keyboard_check(ord("D")) && !place_meeting( x+3, y,obj_Wall) &&  !place_meet
 	
 	
 
+}
+
+if(presscheck = false)
+{
+if(waitsidedete_right = false)
+{
+	image_index = frame_start_wait_left;
+	waittimer ++;
+	if(waittimer >60 && frame_start_wait_index_left < frame_end_wait_left)
+	{
+		frame_start_wait_index_left += 1;
+		image_index = frame_start_wait_index_left;
+		waittimer = 0;
+	}
+	if(frame_start_wait_index_left = frame_end_wait_left)
+	{
+		frame_start_wait_index_left = 27;
+		image_index = frame_start_wait_index_left;
+	}
+}
+if(waitsidedete_right = true)
+{
+	image_index = frame_start_wait_right;
+	waittimer ++;
+	if(waittimer >60 && frame_start_wait_index_right < frame_end_wait_right)
+	{
+		frame_start_wait_index_right += 1;
+		image_index = frame_start_wait_index_right;
+		waittimer = 0;
+	}
+	if(frame_start_wait_index_right = frame_end_wait_right)
+	{
+		frame_start_wait_index_right = 32;
+		image_index = frame_start_wait_index_right;
+	}
+}
 }
 
 if (place_meeting( x, y, obj_Wall) && keyboard_check(ord("W") ))//撞墙bug修复
@@ -109,16 +150,29 @@ if (place_meeting( x, y,obj_orangecat) && keyboard_check(vk_space))
 if(catcat = 1)
 {
 	
-	image_index = frame_start_catcat;
-	frame_index_catcat += 1;
-	image_index = frame_index_catcat;
-	image_speed = 0.07;
-	if (frame_index_catcat < frame_start_catcat || frame_index_catcat >frame_end_catcat )
-	{
-		  image_index = 17;
-		  image_speed = 0;
-	}
+	//image_index = frame_start_catcat;
+	//frame_index_catcat += 1;
+	//image_index = frame_index_catcat;
+	//image_speed = 0.07;
+	//if (frame_index_catcat < frame_start_catcat || frame_index_catcat >frame_end_catcat )
+	//{
+	//	  image_index = 20;
+	//	  image_speed = 0;
+	//}
 	
+	image_index = frame_start_catcat;
+	timercatcat ++;
+	if(timercatcat >60 && frame_index_catcat < frame_end_catcat)
+	{
+		frame_index_catcat += 1;
+		image_index = frame_index_catcat;
+		timercatcat = 0;
+	}
+	if(frame_index_catcat = frame_end_catcat)
+	{
+		frame_index_catcat = 16;
+		image_index = frame_index_catcat;
+	}
 }
 
 shootdelay -= 1;
@@ -165,33 +219,35 @@ if(place_meeting(x,y,obj_transfer_to_room_8_1))
      {
         if(place_meeting(x,y,obj_fstudent1))
       {
-	        wordshurt = "aefafadfaefa";
-	        words = "no, i am not like that";
+	        wordshurt = "Too fat!";
+	        words = "Please.";
        }
         if(place_meeting(x,y,obj_fstudent2))
        {
-	       wordshurt = "afaefaefaef";
-	       words = "no, i am not like that";
+	       wordshurt = "Too thin!";
+	       words = "Don’t leave me.";
        }
         if(place_meeting(x,y,obj_mstudent1))
        {
-	       wordshurt = "aefaefaef";
-	       words = "no, i am not like that";
+	       wordshurt = "Tomboy?";
+	       words = "What did I do wrong?";
         }
         if(place_meeting(x,y,obj_mstudent2))
        {
-	       wordshurt = "aefaefaef";
-	       words = "no, i am not like that";
+	       wordshurt = "Bitch?";
+	       words = "I’m sorry.";
         }
       }
 
       if(Marks = 0 && instance_exists(obj_enermy_boy))
     {
-	     words = "why so quiet?";
+	     words = "Why so quiet?";
+		 wordshurt = "AAAAA?";
      }
      if(Marks = 0 && !instance_exists(obj_enermy_boy))
      {
-	     words = "now, why quiet?";
+	     words = "Guess nothing happened?";
+		 wordshurt = "AAAAA?";
      }
      if(!instance_exists(obj_enermy_boy))
      {
@@ -262,8 +318,8 @@ if(room = rm_11_midpark)
   {
 	  if(place_meeting(x,y,obj_fstudent1)|| place_meeting(x,y,obj_fstudent2))
 	  {
-		   wordshurt = "Girl, I do not no why this world treat us like this";
-	       words = "press Y to talk";
+		   wordshurt = "You are lost.";
+	       words = "Where am I?";
 		  if(keyboard_check_pressed(ord("Y")))
 		  {
 			  prenightmare++;
@@ -271,28 +327,28 @@ if(room = rm_11_midpark)
 		  }
 		  if( prenightmare = 1)
 		  {
-			  wordshurt = "how are you ";
-	          words = "where are my?";
+			  wordshurt = "Who knows.";
+	          words = "A dream.?";
 		  }
 		   if( prenightmare = 2)
 		  {
-			  wordshurt = "theahef;aehf;oiueha;f";
-	          words = "nafhea;ofhae;uoat";
+			  wordshurt = "How pathetic.";
+	          words = "Let me out!";
 		  }
 		  if( prenightmare = 3)
 		  {
-			  wordshurt = "theahef;aehf;oiueha;f";
-	          words = "nafhea;ofhae;uoat";
+			  wordshurt = "Press N to spread love.";
+	          words = "How!";
 		  }
 		  if( prenightmare = 4)
 		  {
-			  wordshurt = "the devil is at here";
-	          words = "nafhea;ofhae;uoat";
+			  wordshurt = "Cat might heals you.";
+	          words = "Help!";
 		  }
 		  if( prenightmare > 5)
 		  {
-			  wordshurt = "try to escape";
-	          words = "press space to start";
+			  wordshurt = "Press SPACE.";
+	          words = "Run!";
 			  if(keyboard_check_pressed(vk_space))
 			  {
 				  nightmareindex = 1;

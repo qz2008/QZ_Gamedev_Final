@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_music1",
-  "bbox_bottom": 23,
-  "bbox_left": 2,
-  "bbox_right": 22,
+  "bbox_bottom": 60,
+  "bbox_left": 5,
+  "bbox_right": 58,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -20,7 +20,7 @@
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 25,
+  "height": 64,
   "HTile": false,
   "layers": [
     {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9d6445da-c7de-446e-aaca-67266bc792ea","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
@@ -76,5 +76,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 25,
+  "width": 64,
 }

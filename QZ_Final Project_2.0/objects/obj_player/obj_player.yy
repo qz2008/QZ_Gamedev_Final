@@ -42,8 +42,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_playerbra_001",
-    "path": "sprites/spr_playerbra_001/spr_playerbra_001.yy",
+    "name": "Sprite222",
+    "path": "sprites/Sprite222/Sprite222.yy",
   },
   "spriteMaskId": null,
   "visible": true,
