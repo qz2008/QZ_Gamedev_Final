@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
     
-	if (collision_circle_list(x,y,detectRed,obj_enermy,false,true,enemylist,true)){
+	if (collision_circle_list(x,y,detectRed,obj_enermy,false,true,enemylist,true) || collision_circle_list(x,y,detectRed,obj_enermy_badbook,false,true,enemylist,true) ){
 			 {
 				 //sprite_index = attactsprite;
 				 targetenemy =enemylist[| 0];

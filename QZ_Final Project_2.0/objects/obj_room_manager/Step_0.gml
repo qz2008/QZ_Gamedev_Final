@@ -381,3 +381,260 @@ if(room = rm_14_bedroom_1)
 	
 	
 }
+
+if(room = rm_15_window)
+{
+	windowtimer ++;
+	if(windowtimer = 180)
+	{
+		
+		obj_player.words = "press space to sleep";
+        obj_player.wordshurt= "...";
+		
+	}
+	if(windowtimer >180)
+	{
+		windowspeakcd ++;
+		if(windowspeakcd >20 && keyboard_check_pressed(ord("Y")))
+		{
+			windowindex ++;
+			windowspeakcd = 0;
+			
+		}
+		if(windowindex =  1)
+		{
+			obj_player.words = "11111sleep";
+            obj_player.wordshurt= "...";
+		}
+		if(windowindex =  2)
+		{
+			obj_player.words = "pre2222leep";
+            obj_player.wordshurt= "...";
+		}
+		if(windowindex =  3)
+		{
+			obj_player.words = "press3333p";
+            obj_player.wordshurt= "...";
+		}
+		if(windowindex =  4)
+		{
+			obj_player.words = "pr4444444 sleep";
+            obj_player.wordshurt= "...";
+		}
+		if(windowindex =  5)
+		{
+			obj_player.words = "pre5555555o sleep";
+            obj_player.wordshurt= "...";
+		}
+		if(windowindex =  6)
+		{
+			obj_player.words = "pre666666n off light";
+            obj_player.wordshurt= "...";
+			
+		}
+		if(windowindex > 5)
+		{
+		   if( keyboard_check_pressed(vk_space))
+		    {
+			   room_goto(rm_16_nightwindow);
+		    }
+		}
+	}
+	
+}
+
+if(room = rm_16_nightwindow)
+{
+	windowtimer ++;
+	if(windowtimer >60)
+	{
+		room_goto(rm_17_bedroom_2);
+	}
+}
+
+if(room = rm_17_bedroom_2)
+{
+	if(obj_player.Marks > 0)
+	{
+		obj_player.words = "press space to sleep";
+        obj_player.wordshurt= "adfasefaefa.";
+		
+		if(keyboard_check_pressed(vk_space))
+		{
+			room_goto(rm_18_nightmare);
+		}
+	}
+
+}
+
+if(room = rm_18_nightmare)
+{
+	if(obj_player.Marks = 1)
+	{
+		obj_player.words = "111111ue";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 2)
+	{
+		obj_player.words = "222222t";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 3)
+	{
+		obj_player.words = "33333t";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 4)
+	{
+		obj_player.words = "press space to sleep";
+        obj_player.wordshurt= "...";
+		
+	}
+	if(obj_player.Marks = 5)
+	{
+		obj_player.words = "111111ue";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 6)
+	{
+		obj_player.words = "222222t";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 7)
+	{
+		obj_player.words = "33333t";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 8)
+	{
+		obj_player.words = "press space to sleep";
+        obj_player.wordshurt= "...";
+		
+	}
+	if(obj_player.Marks = 9)
+	{
+		obj_player.words = "111111ue";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 10)
+	{
+		obj_player.words = "222222t";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 11)
+	{
+		obj_player.words = "33333t";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 12)
+	{
+		obj_player.words = "press space to sleep";
+        obj_player.wordshurt= "...";
+		
+	}
+	if(obj_player.Marks = 13)
+	{
+		obj_player.words = "111111ue";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 14)
+	{
+		obj_player.words = "222222t";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 15)
+	{
+		obj_player.words = "33333t";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 16)
+	{
+		obj_player.words = "press space to sleep";
+        obj_player.wordshurt= "...";
+		
+	}
+	if(instance_exists(obj_enermy_badbook))
+	{
+	   if(obj_enermy_badbook.healthbar < 0)
+	   {
+		instance_destroy(obj_enermy_badbook);
+	    obj_player.nightmareindex = 2;
+	   }
+	}
+	if(global.Health < 0)
+	{
+		room_goto(rm_nighmare_death);
+	}
+}
+if(room = rm_nighmare_death)
+{
+	if(keyboard_check_pressed(vk_space))
+	{
+		global.Health += 80;
+		global.ammo += 75;
+		global.death +=1;
+		room_goto(rm_18_nightmare);
+	}
+}
+if(room = rm_19_sweetdream)
+{
+	sweetroom++;
+	if(sweetroom >100)
+	{
+		room_goto(rm_20_bedroom_3);
+	}
+}
+
+if(room = rm_20_bedroom_3)
+{
+	endspeakcd ++;
+	if(keyboard_check_pressed(ord("Y"))&& endspeakcd >20)
+	{
+		 endspeaker ++;
+		 endspeakcd = 0;
+	}
+   
+	if(endspeaker = 0)
+	{
+		obj_player.words = "111111ue";
+        obj_player.wordshurt= "...";
+	}
+	if(endspeaker = 1)
+	{
+		obj_player.words = "222222t";
+        obj_player.wordshurt= "...";
+	}
+	if(endspeaker = 2)
+	{
+		obj_player.words = "33333t";
+        obj_player.wordshurt= "...";
+	}
+	if(endspeaker = 3)
+	{
+		obj_player.words = "press space to sleep";
+        obj_player.wordshurt= "...";
+		
+	}
+	if(endspeaker = 4)
+	{
+		obj_player.words = "111111ue";
+        obj_player.wordshurt= "...";
+	}
+	if(endspeaker = 5)
+	{
+		obj_player.words = "222222t";
+        obj_player.wordshurt= "...";
+	}
+	if(endspeaker = 6)
+	{
+		obj_player.words = "say no,please press N";
+        obj_player.wordshurt= "...";
+	}
+	if(keyboard_check_pressed(ord("N")))
+	{
+		room_goto(rm_21_tagline);
+	}
+		
+}
+
+

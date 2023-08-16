@@ -11,7 +11,13 @@ dir = point_direction(x,y,obj_player.x, obj_player.y);
 dir_rever = point_direction(x,y, obj_player.x, obj_player.y);
 
 badwords = "";
-alarm[0] = 120;
+if(room = rm_18_nightmare)
+{
+	alarm = 480;
+}else
+{
+ alarm[0] = 120;
+}
 if(room = rm_park)
 {
 var _bw1 = "Girl! Get dressed";
@@ -29,6 +35,15 @@ var _bw3 = "waht a shame";
 var _bw4 = "adfafhaohdo";
 var _bw5 = "aeofugioasgdfiuagif";
 var _bw6 = "afougauegofuego";
+}
+if(room = rm_18_nightmare)
+{
+var _bw1 = "sfrfsrfg";
+var _bw2 = "srfsfr a lot";
+var _bw3 = "wsrfsrfame";
+var _bw4 = "ad333aohdo";
+var _bw5 = "aeo444444gdfiuagif";
+var _bw6 = "afo44455555fuego";
 }
 
 badwords = choose(_bw1,_bw2,_bw3,_bw4,_bw5,_bw6);

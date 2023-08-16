@@ -19,13 +19,21 @@
 //}
 
 catcattimer ++;
-if(catcattimer > 20 && global.determination > 20 && obj_player.catcat = 1)
+if(catcattimer > 100 && global.determination > 20 && obj_player.catcat = 1)
 	{
 		if(global.Health < global.maxHealth)
 		{
 	       global.Health += 10;
 	       catcattimer = 0;
 		}
+		
+		spacetime ++;
+		if(spacetime > 120)
+		{
+			global.ammo +=20;
+			spacetime =  0;
+		}
+		
 }
 
 if(catcattimer > 20 && global.determination < 20)

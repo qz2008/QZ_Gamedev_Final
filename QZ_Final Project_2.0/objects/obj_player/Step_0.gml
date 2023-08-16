@@ -238,19 +238,85 @@ if(room = rm_11_midpark)
 	  if(place_meeting(x,y,obj_mark)){
 		  Marks ++;
 	  }
-	  if(Marks = 4)
+	  if(Marks > 3)
 	  {
 		  if(keyboard_check_pressed(vk_space))
 		  {
-		     timercount ++;
-		     if(timercount > 180)
-		   {
+		     //timercount ++;
+		     //if(timercount > 180)
+		   //{
 			    room_goto(rm_15_window);
-		   }
+		   //}
 		  }
+	  }
+  }
+  if(room = rm_17_bedroom_2)
+  {
+	  if(place_meeting(x,y,obj_mark)){
+		  Marks ++;
 	  }
   }
   
   
+  if(room = rm_18_nightmare)
+  {
+	  if(place_meeting(x,y,obj_fstudent1)|| place_meeting(x,y,obj_fstudent2))
+	  {
+		   wordshurt = "Girl, I do not no why this world treat us like this";
+	       words = "press Y to talk";
+		  if(keyboard_check_pressed(ord("Y")))
+		  {
+			  prenightmare++;
+			 
+		  }
+		  if( prenightmare = 1)
+		  {
+			  wordshurt = "how are you ";
+	          words = "where are my?";
+		  }
+		   if( prenightmare = 2)
+		  {
+			  wordshurt = "theahef;aehf;oiueha;f";
+	          words = "nafhea;ofhae;uoat";
+		  }
+		  if( prenightmare = 3)
+		  {
+			  wordshurt = "theahef;aehf;oiueha;f";
+	          words = "nafhea;ofhae;uoat";
+		  }
+		  if( prenightmare = 4)
+		  {
+			  wordshurt = "the devil is at here";
+	          words = "nafhea;ofhae;uoat";
+		  }
+		  if( prenightmare > 5)
+		  {
+			  wordshurt = "try to escape";
+	          words = "press space to start";
+			  if(keyboard_check_pressed(vk_space))
+			  {
+				  nightmareindex = 1;
+				  instance_destroy(obj_broader);
+			  }
+		  }
+	  }
+  }
   
-  
+  if(room = rm_18_nightmare)
+  {
+	  if(place_meeting(x,y,obj_mark)){
+		  Marks ++;
+	  }
+	  if(place_meeting(x,y,obj_transfer_to_room_13))
+	  {
+		  if(nightmareindex = 2)
+		  {
+		     room_goto(rm_19_sweetdream);
+		  }
+		  if(nightmareindex < 2)
+		  {
+			  wordshurt = "you will never escape";
+	          words = "I need to defeat the devil first";
+		  }
+	  }
+  }

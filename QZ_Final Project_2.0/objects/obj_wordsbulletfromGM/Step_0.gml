@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(instance_exists(obj_enermy)){
+if(instance_exists(obj_enermy) ||instance_exists(obj_enermy_badbook)){
 if(instance_exists(obj_player) )
 {
 	if(room = rm_park)
@@ -29,14 +29,19 @@ if(instance_exists(obj_player) )
 	      y += lengthdir_y(speed,dir);
 	  }
 	
-}
-else{
+    }
+    else{
 	
-	direction += image_xscale*8;
+	      direction += image_xscale*8;
 
 
 }
 
+if(room = rm_18_nightmare)
+{
+	x += lengthdir_x(speed, dir);
+	y += lengthdir_y(speed,dir);
+}
 
 if(room = rm_5_classhallway_1)
 {

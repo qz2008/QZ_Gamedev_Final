@@ -55,6 +55,8 @@ timertouchold = 0;
 marktimer = 0;
 timercount = 0;
 
+nightmareindex = 0;
+prenightmare = 0;
 
-
+timer_countact_devil = 0;
 

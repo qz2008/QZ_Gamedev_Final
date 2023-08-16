@@ -14,6 +14,9 @@ var max_width_bad = 140;
 //align the text to the left
 draw_set_halign(fa_left);
 //if we found player 1, draw its score
+draw_rectangle_color(view_x, view_y,view_x +view_w , view_y + view_h/5.5,  c_grey, c_grey, c_grey, c_grey,0);
+
+
 draw_text_ext(view_x + 50, view_y + view_h /  15 , p1.words, line_spcaing, max_width);
 draw_text_ext_color(view_x + 50 +max_width, view_y + view_h /  15 , p1.wordshurt, line_spcaing, max_width_bad,c_red, c_red, c_red, c_red, 1);
 
@@ -42,7 +45,8 @@ if(room = rm_1_bedroom_0 )
     var max_width_bad = 240;
 
     draw_set_halign(fa_left);
-    
+    draw_rectangle_color(view_x, view_y,view_x +view_w , view_y + view_h/5.5,  c_grey, c_grey, c_grey, c_grey,0);
+	
     draw_text_ext(view_x + 300, view_y + view_h /  15 , p1.words, line_spcaing, max_width);
     draw_text_ext_color(view_x + 300 +max_width, view_y + view_h /  15 , p1.wordshurt, line_spcaing, max_width_bad,c_red, c_red, c_red, c_red, 1);
    
@@ -64,7 +68,7 @@ if(room = rm_1_bedroom_0 )
 }
 
 
-if(room = rm_2_sidewalk || room = rm_4_classroom || room = rm_5_classhallway_1 || room = rm_6_streetcorner || room = rm_8_parkentry ||room = rm_11_midpark||room = rm_12_parkroad_1)
+if(room = rm_2_sidewalk || room = rm_4_classroom || room = rm_5_classhallway_1 || room = rm_6_streetcorner || room = rm_8_parkentry ||room = rm_11_midpark||room = rm_12_parkroad_1||room =rm_14_bedroom_1 ||room =rm_20_bedroom_3)
 {
 	var p1 = instance_find(obj_player, 0);
     var view_x = camera_get_view_x(view_camera[0]);
@@ -76,7 +80,8 @@ if(room = rm_2_sidewalk || room = rm_4_classroom || room = rm_5_classhallway_1 |
     var max_width_bad = 240;
 
     draw_set_halign(fa_left);
-    
+    draw_rectangle_color(view_x, view_y,view_x +view_w , view_y + view_h/5.5, c_grey, c_grey, c_grey, c_grey,0);
+	
     draw_text_ext(view_x + 300, view_y + view_h /  15 , p1.words, line_spcaing, max_width);//p1.words
     draw_text_ext_color(view_x + 300 +max_width, view_y + view_h /  15 , p1.wordshurt, line_spcaing, max_width_bad,c_red, c_red, c_red, c_red, 1);
    //p1.wordshurt
@@ -93,6 +98,64 @@ if(room = rm_2_sidewalk || room = rm_4_classroom || room = rm_5_classhallway_1 |
 }
 
 
+if(room = rm_15_window || room = rm_16_nightwindow || room = rm_17_bedroom_2)
+{
+	var p1 = instance_find(obj_player, 0);
+    var view_x = camera_get_view_x(view_camera[0]);
+    var view_y = camera_get_view_y(view_camera[0]);
+    var view_w = camera_get_view_width(view_camera[0]);
+    var view_h = camera_get_view_height(view_camera[0]);
+    var line_spcaing = 15;
+    var max_width = 170 + global.determination;
+    var max_width_bad = 240;
 
+    draw_set_halign(fa_left);
+    draw_rectangle_color(view_x, view_y,view_x +view_w , view_y + view_h/5.5, c_grey, c_grey, c_grey, c_grey,0);
+	
+    draw_text_ext(view_x + 300, view_y + view_h /  15 , p1.words, line_spcaing, max_width);//p1.words
+    draw_text_ext_color(view_x + 300 +max_width, view_y + view_h /  15 , p1.wordshurt, line_spcaing, max_width_bad,c_red, c_red, c_red, c_red, 1);
+   //p1.wordshurt
+   
+    //draw_text_color(view_x + 850, view_y + view_h / 15 , "Health", c_red, c_red, c_maroon, c_maroon, 1);
+   // draw_text_color(view_x + 970, view_y + view_h / 15 , global.Health, c_red, c_red, c_maroon, c_maroon, 1);
+   //p1.Health
+   // draw_text_color(view_x + 850, view_y + view_h / 9,  "AMMO", c_maroon, c_maroon, c_maroon, c_maroon, 1);
+   // draw_text_color(view_x + 970, view_y + view_h / 9,  global.ammo, c_red, c_red, c_red, c_red, 1);
+   //p1.ammo
+   // draw_text_color(view_x + 850, view_y + view_h / 6.5,  "Determination", c_maroon, c_maroon, c_maroon, c_maroon, 1);
+   // draw_text_color(view_x + 970, view_y + view_h / 6.5,  global.determination, c_red, c_red, c_red, c_red, 1);
+	//p1.determination
+}
+
+if(room = rm_18_nightmare)
+{
+	var p1 = instance_find(obj_player, 0);
+    var view_x = camera_get_view_x(view_camera[0]);
+    var view_y = camera_get_view_y(view_camera[0]);
+    var view_w = camera_get_view_width(view_camera[0]);
+    var view_h = camera_get_view_height(view_camera[0]);
+    var line_spcaing = 15;
+    var max_width = 140 + global.determination;
+    var max_width_bad = 140;
+
+    draw_set_halign(fa_left);
+	draw_rectangle_color(view_x, view_y,view_x +view_w , view_y + view_h/5.5,  c_grey, c_grey, c_grey, c_grey,0);
+    
+    draw_text_ext(view_x+10, view_y + view_h /  15 , p1.words, line_spcaing, max_width);
+    draw_text_ext_color(view_x -50 +max_width, view_y + view_h /  15 , p1.wordshurt, line_spcaing, max_width_bad,c_red, c_red, c_red, c_red, 1);
+
+    draw_text_color(view_x + 350, view_y + view_h / 15 , "Health", c_red, c_red, c_maroon, c_maroon, 1);
+    draw_text_color(view_x + 470, view_y + view_h / 15 , global.Health, c_red, c_red, c_maroon, c_maroon, 1);
+    draw_text_color(view_x + 350, view_y + view_h / 9,  "AMMO", c_maroon, c_maroon, c_maroon, c_maroon, 1);
+    draw_text_color(view_x + 470, view_y + view_h / 9,  global.ammo, c_red, c_red, c_red, c_red, 1);
+    draw_text_color(view_x + 350, view_y + view_h / 6.5,  "Determination", c_maroon, c_maroon, c_maroon, c_maroon, 1);
+    draw_text_color(view_x + 470, view_y + view_h / 6.5,  global.determination, c_red, c_red, c_red, c_red, 1);
+	 if(obj_player.prenightmare > 3 && instance_exists(obj_enermy_badbook))
+	 {
+		 draw_text_color(view_x + 350, view_y + view_h / 4.8,  "Devil", c_maroon, c_maroon, c_maroon, c_maroon, 1);
+         draw_text_color(view_x + 470, view_y + view_h / 4.8,  obj_enermy_badbook.healthbar, c_red, c_red, c_red, c_red, 1);
+	 }
+
+}
 
 
