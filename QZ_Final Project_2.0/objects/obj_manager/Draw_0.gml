@@ -23,7 +23,11 @@ draw_text_color(view_x + 350, view_y + view_h / 9,  "AMMO", c_maroon, c_maroon, 
 draw_text_color(view_x + 470, view_y + view_h / 9,  global.ammo, c_red, c_red, c_red, c_red, 1);
 draw_text_color(view_x + 350, view_y + view_h / 6.5,  "Determination", c_maroon, c_maroon, c_maroon, c_maroon, 1);
 draw_text_color(view_x + 470, view_y + view_h / 6.5,  global.determination, c_red, c_red, c_red, c_red, 1);
-
+if(room = rm_park)
+{
+	draw_text_color(view_x + 350, view_y + view_h / 4.8,  "Timer", c_maroon, c_maroon, c_maroon, c_maroon, 1);
+    draw_text_color(view_x + 470, view_y + view_h / 4.8,  obj_room_manager.timer / real_world_time, c_red, c_red, c_red, c_red, 1);
+}
 }
 
 if(room = rm_1_bedroom_0 )
@@ -60,7 +64,7 @@ if(room = rm_1_bedroom_0 )
 }
 
 
-if(room = rm_2_sidewalk || room = rm_4_classroom || room = rm_5_classhallway_1 || room = rm_6_streetcorner || room = rm_8_parkentry)
+if(room = rm_2_sidewalk || room = rm_4_classroom || room = rm_5_classhallway_1 || room = rm_6_streetcorner || room = rm_8_parkentry ||room = rm_11_midpark||room = rm_12_parkroad_1)
 {
 	var p1 = instance_find(obj_player, 0);
     var view_x = camera_get_view_x(view_camera[0]);

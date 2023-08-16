@@ -38,7 +38,7 @@ if (keyboard_check(ord("S")) && !place_meeting( x, y+3,obj_Wall) && !place_meeti
 	}
 	
 }
-if (keyboard_check(ord("A")) && !place_meeting( x-3, y,obj_Wall) && !place_meeting( x-3, y, obj_broader) )
+if (keyboard_check(ord("A")) && !place_meeting( x-3, y,obj_Wall) && !place_meeting( x-3, y, obj_broader))
 {
 	catcat = 0;
 	//image_xscale = -1; //反向
@@ -142,15 +142,25 @@ if(place_meeting(x,y,obj_transfer_to_room_7))
 }
 if(place_meeting(x,y,obj_transfer_to_room_8))
   {
+	                room_goto(rm_7_mainstreet);
+  }
+if(place_meeting(x,y,obj_transfer_to_room_8_1))
+  {
 	                room_goto(rm_8_parkentry);
   }
   if(place_meeting(x,y,obj_transfer_to_room_9))
   {
 	                room_goto(rm_park);
   }
+  if(place_meeting(x,y,obj_transfer_to_room_10))
+  {
+	                room_goto(rm_11_midpark);
+  }
   
   if(room = rm_5_classhallway_1)
   {
+	  place_meeting(x,y,obj_mark);
+	  Marks ++;
      if(Marks >0)
      {
         if(place_meeting(x,y,obj_fstudent1))
@@ -200,3 +210,47 @@ if(room = rm_6_streetcorner || room = rm_8_parkentry)
 	place_meeting(x,y,obj_mark);
 	Marks ++;
 }
+
+
+if(room = rm_11_midpark)
+  {
+	  if(place_meeting(x,y,obj_mark)){
+		  Marks ++;
+	  }
+	  if(place_meeting(x,y,obj_transfer_to_room_11))
+	  {
+		  room_goto(rm_12_parkroad_1);
+	  }
+  }
+  
+  if(room = rm_12_parkroad_1)
+  {
+	  if(place_meeting(x,y,obj_mark)){
+		  Marks ++;
+	  }
+	  if(place_meeting(x,y,obj_transfer_to_room_12))
+	  {
+		  room_goto(rm_13_nighttime);
+	  }
+  }
+   if(room = rm_14_bedroom_1)
+  {
+	  if(place_meeting(x,y,obj_mark)){
+		  Marks ++;
+	  }
+	  if(Marks = 4)
+	  {
+		  if(keyboard_check_pressed(vk_space))
+		  {
+		     timercount ++;
+		     if(timercount > 180)
+		   {
+			    room_goto(rm_15_window);
+		   }
+		  }
+	  }
+  }
+  
+  
+  
+  

@@ -12,6 +12,7 @@ for(i= 0; i < global.bagsize; i++)
 }
 
 timerenermyparkgen = 0;
+real_world_time = 60;
 //instance_create_depth(0, 0, 10, obj_managementbar);
 //instance_create_depth(0, 0, 50, obj_managementwords);
 

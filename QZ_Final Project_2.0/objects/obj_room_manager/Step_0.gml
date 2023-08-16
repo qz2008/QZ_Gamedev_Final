@@ -264,3 +264,120 @@ if(room = rm_8_parkentry)
         obj_player.wordshurt= "....";
 	}
 }
+
+if(room = rm_park)
+{
+	timer --;
+	if(timer < 0)
+	{
+		instance_create_depth(x+250,y+500,10,obj_transfer_to_room_10);
+		timer = 0;
+	}
+}
+
+if(room = rm_11_midpark)
+{
+	if(obj_player.Marks = 1)
+	{
+		obj_player.words = "111111ue";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 2)
+	{
+		obj_player.words = "222222t";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 3)
+	{
+		obj_player.words = "33333t";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 4)
+	{
+		obj_player.words = "s44444got";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 5)
+	{
+		obj_player.words = "sh555555rhgot";
+        obj_player.wordshurt= "...o";
+	}
+	if(obj_player.Marks = 6)
+	{
+		obj_player.words = "s6666666hgot";
+        obj_player.wordshurt= "srugorsugo";
+	}
+	if(obj_player.Marks = 7)
+	{
+		obj_player.words = "sh7777777got";
+        obj_player.wordshurt= "....";
+		instance_create_depth(x,y+450,10,obj_transfer_to_room_11);
+	}
+	if(obj_player.catcat =1)
+	{
+		obj_player.words = "shfgosurhgot";
+        obj_player.wordshurt= "....";
+	}
+}
+
+if(room = rm_12_parkroad_1)
+{
+	if(obj_player.Marks = 1)
+	{
+		obj_player.words = "111111ue";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 2)
+	{
+		obj_player.words = "222222t";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 3)
+	{
+		obj_player.words = "33333t";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 4)
+	{
+		obj_player.words = "s44444got";
+        obj_player.wordshurt= "...";
+	}
+	
+}
+if(room = rm_13_nighttime)
+{
+	counter ++;
+	if(counter >180)
+	{
+		room_goto(rm_14_bedroom_1);
+	}
+	
+	
+}
+if(room = rm_14_bedroom_1)
+{
+	if(obj_player.Marks = 1)
+	{
+		obj_player.words = "111111ue";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 2)
+	{
+		obj_player.words = "222222t";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 3)
+	{
+		obj_player.words = "33333t";
+        obj_player.wordshurt= "...";
+	}
+	if(obj_player.Marks = 4)
+	{
+		obj_player.words = "press space to sleep";
+        obj_player.wordshurt= "...";
+		
+	}
+	
+	
+	
+}

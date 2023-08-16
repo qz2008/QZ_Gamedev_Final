@@ -52,7 +52,8 @@ introduction_timer = 0;
 
 Marks = 0;
 timertouchold = 0;
-
+marktimer = 0;
+timercount = 0;
 
 
 
