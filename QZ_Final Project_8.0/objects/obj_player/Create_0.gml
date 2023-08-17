@@ -52,6 +52,7 @@ waitsidedete_right = true;
 presscheck = false;
 catcat = 0;
 timercatcat = 0;
+walking = false;
 
 words = "";
 wordshurt= "";

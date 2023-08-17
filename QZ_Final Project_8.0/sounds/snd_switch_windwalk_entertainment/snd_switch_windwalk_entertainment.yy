@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "snd_switch_windwalk_entertainment.wav",
   "type": 0,
-  "volume": 1.0,
+  "volume": 0.83,
 }

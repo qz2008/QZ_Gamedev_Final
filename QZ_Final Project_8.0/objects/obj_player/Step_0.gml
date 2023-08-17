@@ -2,6 +2,7 @@
 // You can write your code in this editor
 if (keyboard_check(ord("W")) && !place_meeting( x, y-3, obj_Wall) && !place_meeting( x, y-3, obj_broader) )
 {
+	
 	catcat = 0;
     y -= moveSpd; // 向上移动
 	frame_index_up += 1;
@@ -188,6 +189,10 @@ if(room = rm_1_bedroom_0)
 
 if(place_meeting(x,y,obj_transfer_to_room_2))
 {
+	if (!audio_is_playing(snd_doorclose_matrixxx))
+    {
+        audio_play_sound(snd_doorclose_matrixxx, 1, false);
+    }
 	room_goto(rm_2_sidewalk);
 }
 if(place_meeting(x,y,obj_transfer_to_room_7))
@@ -208,11 +213,20 @@ if(place_meeting(x,y,obj_transfer_to_room_8_1))
   }
   if(place_meeting(x,y,obj_transfer_to_room_10))
   {
+	  if (!audio_is_playing(snd_bsuccess))
+                    {
+                       audio_play_sound(snd_bsuccess, 1, false);
+                    }
 	                room_goto(rm_11_midpark);
   }
   
   if(room = rm_5_classhallway_1)
   {
+	  audio_stop_sound(snd_room4_________);
+	if (!audio_is_playing(snd_studentgossip_speedygonzo))
+    {
+        audio_play_sound(snd_studentgossip_speedygonzo, 1, false);
+    }
 	  if(place_meeting(x,y,obj_mark))
 	  {
 	  Marks ++;
@@ -243,6 +257,7 @@ if(place_meeting(x,y,obj_transfer_to_room_8_1))
 
       if(Marks = 0 && instance_exists(obj_enermy_boy))
     {
+		 audio_stop_sound(snd_studentgossip_speedygonzo);
 	     words = "Moonzi: Why so quiet?";
 		 wordshurt = "World: ...?";
      }
@@ -253,6 +268,7 @@ if(place_meeting(x,y,obj_transfer_to_room_8_1))
      }
      if(Marks = 0 && !instance_exists(obj_enermy_boy))
      {
+		 
 	     words = "Moonzi: Pretend nothing happened?";
 		 wordshurt = "World: @z*I$@.";
      }
@@ -261,6 +277,13 @@ if(place_meeting(x,y,obj_transfer_to_room_8_1))
 
 if(room = rm_park && global.Health < 0)
 {
+	audio_stop_sound(snd_detail_fountain_roman_cgr);
+	audio_stop_sound(snd_adultsgrumble_belizarius);
+	audio_stop_sound(snd_adultsjudge_deleted_user);
+	 if (!audio_is_playing(snd_bfailure_mohamedomarcomposer))
+         {
+           audio_play_sound(snd_bfailure_mohamedomarcomposer, 1, false);
+         }
 	room_goto(rm_park_death);
 }
 
@@ -296,6 +319,7 @@ if(room = rm_11_midpark)
   }
    if(room = rm_14_bedroom_1)
   {
+	  
 	  if(place_meeting(x,y,obj_mark)){
 		  Marks ++;
 	  }
@@ -334,21 +358,37 @@ if(room = rm_11_midpark)
 		  {
 			  wordshurt = "World: You are lost.";
 	          words = "Moonzi: Where am I";
+			  if (!audio_is_playing(snd_tension_2_eponn))
+                    {
+                       audio_play_sound(snd_tension_2_eponn, 1, false);
+                    }
 		  }
 		   if( prenightmare = 2)
 		  {
 			  wordshurt = "Mind: Who knows.";
 	          words = "Moonzi: A dream?";
+			  if (!audio_is_playing(snd_tension_3_eponn))
+                    {
+                       audio_play_sound(snd_tension_3_eponn, 1, false);
+                    }
 		  }
 		  if( prenightmare = 3)
 		  {
 			  wordshurt = "Mind: Sing for everyone.";
 	          words = "Moonzi: Let me out!";
+			  if (!audio_is_playing(snd_tension_4_eponn))
+                    {
+                       audio_play_sound(snd_tension_4_eponn, 1, false);
+                    }
 		  }
 		  if( prenightmare = 4)
 		  {
 			  wordshurt = "Mind: Sing for yourself.";
 	          words = "Moonzi: Help!";
+			  if (!audio_is_playing(snd_tension_1_eponn))
+                    {
+                       audio_play_sound(snd_tension_1_eponn, 1, false);
+                    }
 		  }
 		  if( prenightmare > 5)
 		  {
@@ -356,6 +396,10 @@ if(room = rm_11_midpark)
 	          words = "Press SPACE to Run.";
 			  if(keyboard_check_pressed(vk_space))
 			  {
+				  if (!audio_is_playing(snd_breath_tcrocker68))
+                    {
+                       audio_play_sound(snd_breath_tcrocker68, 1, true);
+                    }
 				  nightmareindex = 1;
 				  instance_destroy(obj_broader);
 			  }
@@ -378,6 +422,55 @@ if(room = rm_11_midpark)
 		  {
 			  wordshurt = "World: You will never escape.";
 	          words = "Moonzi: I need to defeat the devil first.";
+			  if (!audio_is_playing(snd_tension_7_eponn))
+                    {
+                       audio_play_sound(snd_tension_7_eponn, 1, false);
+                    }
 		  }
 	  }
+  }
+  
+  if(keyboard_check(ord("W"))||keyboard_check(ord("A"))||keyboard_check(ord("S"))||keyboard_check(ord("D")))
+  {
+	  if (!audio_is_playing(snd_step_unlistenable1))
+    {
+        audio_play_sound(snd_step_unlistenable1, 1, false);
+    }
+  }else
+  {
+	  audio_stop_sound(snd_step_unlistenable1);
+  }
+  
+  if(keyboard_check_pressed(ord("Y"))){
+	  if (!audio_is_playing(snd_click_kwahmah))
+    {
+        audio_play_sound(snd_click_kwahmah, 1, false);
+    }
+  }
+  else
+  {
+	  audio_stop_sound(snd_click_kwahmah);
+  }
+  
+  if(keyboard_check_pressed(vk_space)){
+	  if (!audio_is_playing(snd_packageselect_user391915396))
+    {
+        audio_play_sound(snd_packageselect_user391915396, 1, false);
+    }
+  }
+  else
+  {
+	  audio_stop_sound(snd_packageselect_user391915396);
+  }
+  
+  if(place_meeting(x,y,obj_enemybullet))
+  {
+	  
+              audio_play_sound(snd_hurt_birdofthenorth, 1, false);
+    
+              audio_play_sound(snd_bodyhurt_flem0527, 1, false);
+    
+  }else{
+	  audio_stop_sound(snd_hurt_birdofthenorth);
+	  audio_stop_sound(snd_bodyhurt_flem0527);
   }

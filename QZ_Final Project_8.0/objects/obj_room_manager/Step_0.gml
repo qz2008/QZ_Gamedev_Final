@@ -4,6 +4,11 @@
 
 if(room = rm_0_start)
 {
+	audio_stop_sound(snd_room21_1);
+	if (!audio_is_playing(snd_room0))
+    {
+        audio_play_sound(snd_room0, 1, true);
+    }
 	if(keyboard_check_pressed(vk_space))
 	{
 		room_goto(rm_1_bedroom_0);
@@ -12,6 +17,12 @@ if(room = rm_0_start)
 
 if(room = rm_1_bedroom_0)
 {
+	audio_stop_sound(snd_room0);
+	if (!audio_is_playing(snd_room1_4))
+    {
+        audio_play_sound(snd_room1_4, 1, true);
+    }
+	
 	if(obj_player.introduction_success = 0)
 	{
 	 obj_player.words = "Moonzi: Hi. This area is my thoughts.";
@@ -97,18 +108,59 @@ if(room = rm_1_bedroom_0)
 
 if(room = rm_2_sidewalk)
 {
+	audio_stop_sound(snd_room1_4);
+	if (!audio_is_playing(snd_room5_5))
+    {
+        audio_play_sound(snd_room5_5, 1, true);
+    }
+	duduacount ++;
+	if (!audio_is_playing(snd_detail_carhorn_mickthemicguy))
+    {
+        audio_play_sound(snd_detail_carhorn_mickthemicguy, 1, false);
+		
+    }
+	if(duduacount > 120)
+	{
+		audio_stop_sound(snd_detail_carhorn_mickthemicguy);
+		duduacount = 0;
+	}
 	 obj_player.words = "Moonzi: Go across the road!";
      obj_player.wordshurt= "World: TOOT. TOOT.";
 }
 
 if(room = rm_3_classhallway_0)
 {
+	audio_stop_sound(snd_room5_5);
+	if (!audio_is_playing(snd_studentgossip_speedygonzo))
+    {
+        audio_play_sound(snd_studentgossip_speedygonzo, 1, true);
+    }
+	if (!audio_is_playing(snd_hallway1_jimmygian))
+    {
+        audio_play_sound(snd_hallway1_jimmygian, 1, false);
+    }
 	 obj_player.words = "Moonzi: What are they gossiping?";
      obj_player.wordshurt= "World: ...";
+	 audiocounterschool ++;
+	 if(audiocounterschool > 240)
+	 {
+		 if (!audio_is_playing(snd_detail_bell_deleted_user))
+    {
+              audio_play_sound(snd_detail_bell_deleted_user, 1, false);
+    }
+	 }
 }
 
 if(room = rm_4_classroom)
 {
+	audio_stop_sound(snd_studentgossip_speedygonzo);
+	audio_stop_sound(snd_hallway1_jimmygian);
+	audio_stop_sound(snd_detail_bell_deleted_user);
+	if (!audio_is_playing(snd_room4_________))
+    {
+        audio_play_sound(snd_room4_________, 1, true);
+    }
+	
 	if(global.ammo = 0)
 	{
 		obj_player.words = "Moonzi: I love music!";
@@ -169,15 +221,32 @@ if(room = rm_4_classroom)
 	   obj_player.words = "Moonzi: Yes!!!";
        obj_player.wordshurt= "Teacher: Go to the right! Save the world!";
 	   instance_destroy(obj_broader);
+	   if (!audio_is_playing(snd_detail_bell_deleted_user))
+        {
+              audio_play_sound(snd_detail_bell_deleted_user, 1, false);
+        }
 	}
 	
 }
 
 if(room = rm_6_streetcorner)
 {
+   audio_stop_sound(snd_studentgossip_speedygonzo);
+   audio_stop_sound(snd_hallway1_jimmygian);
+   audio_stop_sound(snd_adultsjudge_deleted_user);
+   if (!audio_is_playing(snd_shop_mirandahuang))
+         {
+              audio_play_sound(snd_shop_mirandahuang, 1, true);
+         }
    if(obj_player.catcat = 1)
 	 {
 		 instance_destroy(obj_broader);
+		  if (!audio_is_playing(snd_meow_lextrack))
+         {
+              audio_play_sound(snd_meow_lextrack, 1, true);
+         }
+	 }else{
+		 audio_stop_sound(snd_meow_lextrack);
 	 }
    
 }
@@ -195,6 +264,10 @@ if(room = rm_park_death)
 if(room = rm_6_streetcorner)
 {
 	
+	if (!audio_is_playing(snd_room6_8))
+    {
+        audio_play_sound(snd_room6_8, 1, true);
+    }
 	if(obj_player.Marks = 1)
 	{
 		obj_player.words = "Moonzi: Am I wrong tho...";
@@ -234,12 +307,22 @@ if(room = rm_6_streetcorner)
 
 if(room = rm_7_mainstreet)
 {
+	 audio_stop_sound(snd_shop_mirandahuang);
+	 if (!audio_is_playing(snd_streetbusy_chimericalinspectorj))
+    {
+        audio_play_sound(snd_streetbusy_chimericalinspectorj, 1, true);
+    }
 	 obj_player.words = "Moonzi: Across the road!";
      obj_player.wordshurt= "World: TOOT. TOOT.";
 }
 
 if(room = rm_8_parkentry)
 {
+	 audio_stop_sound(snd_streetbusy_chimericalinspectorj);
+	 if (!audio_is_playing(snd_parkday_deleted_user))
+    {
+        audio_play_sound(snd_parkday_deleted_user, 1, true);
+    }
 	if(obj_player.Marks = 1)
 	{
 		obj_player.words = "Moonzi: The nature heals me.";
@@ -279,9 +362,27 @@ if(room = rm_8_parkentry)
 
 if(room = rm_park)
 {
+	audio_stop_sound(snd_room6_8);
+	if (!audio_is_playing(snd_detail_fountain_roman_cgr))
+    {
+        audio_play_sound(snd_detail_fountain_roman_cgr, 1, false);
+    }
+	if (!audio_is_playing(snd_room9_0))
+    {
+        audio_play_sound(snd_room9_0, 1, true);
+    }
+	if (!audio_is_playing(snd_adultsgrumble_belizarius))
+    {
+        audio_play_sound(snd_adultsgrumble_belizarius, 1, true);
+    }
+	if (!audio_is_playing(snd_adultsjudge_deleted_user))
+    {
+        audio_play_sound(snd_adultsjudge_deleted_user, 1, true);
+    }
 	timer --;
 	if(timer < 0)
 	{
+		 
 		instance_create_depth(x+250,y+500,10,obj_transfer_to_room_10);
 		timer = 0;
 	}
@@ -289,6 +390,14 @@ if(room = rm_park)
 
 if(room = rm_11_midpark)
 {
+	audio_stop_sound(snd_detail_fountain_roman_cgr);
+	audio_stop_sound(snd_room9_0);
+	audio_stop_sound(snd_adultsjudge_deleted_user);
+	audio_stop_sound(snd_adultsgrumble_belizarius);
+	if (!audio_is_playing(snd_room10_14))
+    {
+        audio_play_sound(snd_room10_14, 1, true);
+    }
 	if(obj_player.Marks = 1)
 	{
 		obj_player.words = "Moonzi: Nobody wants me.";
@@ -329,6 +438,11 @@ if(room = rm_11_midpark)
 
 if(room = rm_12_parkroad_1)
 {
+	audio_stop_sound(snd_parkday_deleted_user);
+	if (!audio_is_playing(snd_parknight_sam_daiya))
+    {
+        audio_play_sound(snd_parknight_sam_daiya, 1, true);
+    }
 	if(obj_player.Marks = 1)
 	{
 		obj_player.words = "Moonzi: Hmm...";
@@ -353,9 +467,14 @@ if(room = rm_12_parkroad_1)
 }
 if(room = rm_13_nighttime)
 {
+	
 	counter ++;
 	if(counter >120)
 	{
+		if (!audio_is_playing(snd_dooropen_inspectorj))
+                    {
+                       audio_play_sound(snd_dooropen_inspectorj, 1, false);
+                    }
 		room_goto(rm_14_bedroom_1);
 	}
 	
@@ -363,6 +482,7 @@ if(room = rm_13_nighttime)
 }
 if(room = rm_14_bedroom_1)
 {
+	audio_stop_sound(snd_parknight_sam_daiya);
 	if(obj_player.Marks = 1)
 	{
 		obj_player.words = "Moonzi: I'm home.";
@@ -391,6 +511,16 @@ if(room = rm_14_bedroom_1)
 
 if(room = rm_15_window)
 {
+	
+	audio_stop_sound(snd_room10_14);
+	if (!audio_is_playing(snd_streetquiet_yoyodaman234))
+    {
+        audio_play_sound(snd_streetquiet_yoyodaman234, 1, false);
+    }
+	if (!audio_is_playing(snd_room15_17))
+    {
+        audio_play_sound(snd_room15_17, 1, true);
+    }
 	windowtimer ++;
 	if(windowtimer = 180)
 	{
@@ -443,6 +573,10 @@ if(room = rm_15_window)
 		{
 		   if( keyboard_check_pressed(vk_space))
 		    {
+				if (!audio_is_playing(snd_switch_windwalk_entertainment))
+                 {
+                     audio_play_sound(snd_switch_windwalk_entertainment, 1, false);
+                 }
 			   room_goto(rm_16_nightwindow);
 		    }
 		}
@@ -468,6 +602,10 @@ if(room = rm_17_bedroom_2)
 		
 		if(keyboard_check_pressed(vk_space))
 		{
+			if (!audio_is_playing(snd_dress_mattruthsound))
+            {
+                audio_play_sound(snd_dress_mattruthsound, 1, false);
+            }
 			room_goto(rm_18_nightmare);
 		}
 	}
@@ -476,6 +614,13 @@ if(room = rm_17_bedroom_2)
 
 if(room = rm_18_nightmare)
 {
+	audio_stop_sound(snd_streetquiet_yoyodaman234);
+	audio_stop_sound(snd_room15_17);
+	if (!audio_is_playing(snd_room18))
+    {
+        audio_play_sound(snd_room18, 1, true);
+    }
+	
 	if(obj_player.Marks = 1)
 	{
 		obj_player.words = "Moonzi: I am who I am!";
@@ -562,10 +707,32 @@ if(room = rm_18_nightmare)
 	}
 	if(instance_exists(obj_enermy_badbook))
 	{
+		
+		demoacout ++;
+		if(demoacout >240)
+		{
+		   if (!audio_is_playing(snd_demonvoice_denismgaya_21100326))
+          {
+               audio_play_sound(snd_demonvoice_denismgaya_21100326, 1, false);
+          }
+		  demoreturncount ++;
+		  if(demoreturncount > 600)
+		  {
+		     demoacout = 0;
+		  }
+		}else{
+			audio_stop_sound(snd_demonvoice_denismgaya_21100326);
+		}
+		
 	   if(obj_enermy_badbook.healthbar < 0 || obj_enermy_badbook.healthbar = 0)
 	   {
 		instance_destroy(obj_enermy_badbook);
 	    obj_player.nightmareindex = 2;
+		if (!audio_is_playing(snddemondeath_jalyncatbtg))
+          {
+               audio_play_sound(snddemondeath_jalyncatbtg, 1, false);
+          }
+		audio_stop_sound(snd_breath_tcrocker68);
 	   }
 	}
 	if(global.Health < 0)
@@ -577,6 +744,7 @@ if(room = rm_nighmare_death)
 {
 	if(keyboard_check_pressed(vk_space))
 	{
+		
 		global.Health += 80;
 		global.ammo += 75;
 		global.death +=1;
@@ -586,7 +754,11 @@ if(room = rm_nighmare_death)
 }
 if(room = rm_19_sweetdream)
 {
-	
+	audio_stop_sound(snd_room18);
+	if (!audio_is_playing(snd_room21_1))
+    {
+        audio_play_sound(snd_room21_1, 1, false);
+    }
 	obj_player.words = "Moonzi: I love myself.";
     obj_player.wordshurt= "Press SPACE to Continue";
 	sweetroom++;
@@ -658,3 +830,13 @@ if(room = rm_21_tagline){
 }
 
 
+ if(obj_player.catcat = 1)
+	 {
+		
+		  if (!audio_is_playing(snd_meow_lextrack))
+         {
+              audio_play_sound(snd_meow_lextrack, 1, true);
+         }
+	 }else{
+		 audio_stop_sound(snd_meow_lextrack);
+	 }

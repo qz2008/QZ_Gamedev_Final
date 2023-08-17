@@ -8,11 +8,21 @@
   "inheritLayers": false,
   "instanceCreationOrder": [
     {"name":"inst_5FB242D3","path":"rooms/rm_nighmare_death/rm_nighmare_death.yy",},
+    {"name":"inst_4A21C955","path":"rooms/rm_nighmare_death/rm_nighmare_death.yy",},
+    {"name":"inst_7A4F7782","path":"rooms/rm_nighmare_death/rm_nighmare_death.yy",},
+    {"name":"inst_F01451C","path":"rooms/rm_nighmare_death/rm_nighmare_death.yy",},
+    {"name":"inst_677AAA07","path":"rooms/rm_nighmare_death/rm_nighmare_death.yy",},
+    {"name":"inst_5258894D","path":"rooms/rm_nighmare_death/rm_nighmare_death.yy",},
   ],
   "isDnd": false,
   "layers": [
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Instances","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5FB242D3","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_room_manager","path":"objects/obj_room_manager/obj_room_manager.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_4A21C955","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1056.0,"y":832.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_7A4F7782","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":0.5,"x":1056.0,"y":800.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_F01451C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":0.5,"x":1056.0,"y":896.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_677AAA07","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},"properties":[],"rotation":0.0,"scaleX":0.5,"scaleY":2.0,"x":1120.0,"y":800.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_5258894D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},"properties":[],"rotation":0.0,"scaleX":0.5,"scaleY":2.0,"x":1024.0,"y":800.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4294967295,"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"properties":[],"spriteId":{"name":"spr_roomdreamlose","path":"sprites/spr_roomdreamlose/spr_roomdreamlose.yy",},"stretch":true,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],

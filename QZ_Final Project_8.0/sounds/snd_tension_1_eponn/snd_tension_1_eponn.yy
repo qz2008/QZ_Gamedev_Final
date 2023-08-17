@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "snd_tension_1_eponn.wav",
   "type": 0,
-  "volume": 1.0,
+  "volume": 0.29,
 }

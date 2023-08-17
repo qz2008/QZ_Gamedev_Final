@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "snd_detail_bell_deleted_user.wav",
   "type": 0,
-  "volume": 1.0,
+  "volume": 0.86,
 }

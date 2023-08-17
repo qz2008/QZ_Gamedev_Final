@@ -19,5 +19,5 @@
   "sampleRate": 44100,
   "soundFile": "snd_detail_fountain_roman_cgr.wav",
   "type": 0,
-  "volume": 1.0,
+  "volume": 0.1,
 }

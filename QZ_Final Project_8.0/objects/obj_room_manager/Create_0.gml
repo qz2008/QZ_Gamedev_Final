@@ -6,6 +6,10 @@ timer = 1800;
 
 counter = 0;
 
+audiocounterschool = 0;
+duduacount = 0;
+demoacout = 0;
+demoreturncount = 0;
 
 windowtimer = 0;
 windowindex = 0;
